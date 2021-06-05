@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Russian Draughts Versus</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div id="topContainer">
+      <div id="topBar">
+        <button id="undoButton" onclick="updateHistory(true)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="200"
+            height="200"
+            viewBox="0 0 52.916665 52.916668"
+            version="1.1"
+            id="svg851"
+          >
+            <g transform="translate(0,-244.08332)">
+              <path
+                style="stroke-width: 0.53952575"
+                d="m 33.589883,283.52029 1.430382,-1.31775 c 3.060337,-2.81935
+                  4.203637,-7.83635 2.830354,-12.42 -1.994578,-6.65732 
+                  -10.242907,-10.37152 -16.613973,-7.48124 l -2.392839,1.08554
+                  6.370471,6.43764 H 8.2530082 v -16.98332 l 6.0348428,6.03484
+                  2.792589,-1.51256 c 9.618824,-5.20978 21.397605,-1.16267 
+                  26.060392,8.95411 2.854517,6.19342 1.597023,14.60427 
+                  -2.94306,19.68516 l -2.001082,2.23943 z"
+                id="path837"
+              />
+            </g>
+          </svg>
+        </button>
+        <button id="restartButton" onclick="restart()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="200"
+            height="200"
+            viewBox="0 0 52.916665 52.916668"
+            version="1.1"
+            id="svg8"
+          >
+            <g transform="translate(0,-244.08332)">
+              <path
+                style="stroke-width: 0.54185945"
+                d="M 7.8461257,273.3 H 24.8808 c -2.108746,2.13101 
+                  -4.21753,4.26196 -6.32627,6.39296 1.552969,1.11475 
+                  3.440927,1.88022 5.120085,2.30056 7.467984,1.86944 
+                  15.057523,-4.3563 15.057523,-12.33941 0,-11.09508 
+                  -13.054282,-16.79436 -21.063219,-9.19581 -2.193231,2.08085 
+                  -3.83509,5.41747 -3.850438,7.82951 l -0.0112,1.76103 H 
+                  7.8468347 c 0,-1.53562 0,-4.13355 0.438504,-5.83843 
+                  1.680561,-6.53391 6.8233643,-11.15738 13.3572843,-12.83788 
+                  3.324904,-0.85515 5.998942,-0.86871 9.254887,0.004 
+                  6.830155,1.83013 11.874232,6.93219 13.603448,13.9676 
+                  2.11387,8.60025 -1.736053,17.27215 -10.219003,21.3452 
+                  -6.596454,3.16728 -13.335923,1.77525 -20.320676,-2.4471 l 
+                  -6.1144443,6.11449 z"
+                id="path839"
+              />
+            </g>
+          </svg>
+        </button>
+        <button id="bgMode" state="off" onclick="bgMode()">
+          <div></div>
+        </button>
+        <div class="label">Dark Mode:</div>
+      </div>
+      <div class="tableContainer">
+        <table></table>
+        <div class="errorMsg">
+          <h2>Please use a supported browser</h2>
+          <div>
+            You might be seeing this error message because the application you
+            are using to view this document does not support scripting.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
