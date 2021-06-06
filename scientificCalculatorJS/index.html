@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="previous"></div>
+    <div class="input"></div>
+  </header>
+  <section class="tables">
+    <table>
+      <tr>
+        <td><div onclick="button('π')">
+          π
+        </div>
+        </td>
+        <td><div onclick="button('sin')">
+          sin
+        </div>
+        </td>
+        <td><div onclick="button('cos')">
+          cos
+        </div>
+        </td>
+        <td><div onclick="button('tan')">
+          tan
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div onclick="button('e')">
+          e
+        </div>
+        </td>
+        <td>
+          <div onclick="button('asin')">
+            <p>
+              sin<sup>-1</sup>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div onclick="button('acos')">
+            <p>
+              cos<sup>-1</sup>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div onclick="button('atan')">
+            <p>
+              tan<sup>-1</sup>
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div onclick="button('!')">
+          !
+        </div>
+        </td>
+        <td>
+          <div onclick="button('√')">
+            √x
+          </div>
+        </td>
+        <td><div onclick="button('ln')">
+          ln
+        </div>
+        </td>
+        <td><div onclick="button('log')">
+          log
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div onclick="button('(')">
+          (
+        </div>
+        </td>
+        <td><div onclick="button(')')">
+          )
+        </div>
+        </td>
+        <td>
+          <!-- <div>^</div> -->
+          <div onclick="button('^')">
+            <p>
+              x<sup>y</sup>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div onclick="button('÷')">
+            ÷
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><div class="digits" onclick="button('7')">
+          7
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('8')">
+          8
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('9')">
+          9
+        </div>
+        </td>
+        <td>
+          <div onclick="button('backspace')">
+            <!-- <img src="./drawing.svg" alt="<=" height="13px" /> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="13px"
+              viewBox="0 0 99.029655 60.4762"
+              version="1.1"
+              id="svg8"
+              >
+              <g
+                inkscape:label="Layer 1"
+                inkscape:groupmode="layer"
+                id="layer1"
+                transform="translate(-55.940579,-91.470225)"
+                >
+                <g
+                  id="g853"
+                  transform="translate(0.5480243)"
+                  style="
+                  stroke-width: 4.7625;
+                  stroke-miterlimit: 4;
+                  stroke-dasharray: none;
+                  "
+                  >
+                  <path
+                    style="
+                    fill: none;
+                    stroke: #000000;
+                    stroke-width: 4.7625;
+                    stroke-linecap: butt;
+                    stroke-linejoin: miter;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-opacity: 1;
+                    "
+                    d="M 86.96673,95.277219 60.535625,121.70832 86.96673,148.13943 h 63.36223 V 95.277219 Z"
+                    id="path837"
+                    />
+                  <g
+                    id="g847"
+                    transform="matrix(0.95791717,0,0,0.95791717,3.509621,7.2942409)"
+                    style="
+                    stroke-width: 4.97172423;
+                    stroke-linecap: butt;
+                    stroke-linejoin: miter;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    "
+                    >
+                    <path
+                      style="
+                      fill: none;
+                      stroke: #000000;
+                      stroke-width: 4.97172423;
+                      stroke-linecap: butt;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+                      stroke-dasharray: none;
+                      stroke-opacity: 1;
+                      "
+                      d="m 102.45441,104.72227 29.43641,29.43641"
+                      id="path841"
+                      />
+                    <path
+                      style="
+                      fill: none;
+                      stroke: #000000;
+                      stroke-width: 4.97172423;
+                      stroke-linecap: butt;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+                      stroke-dasharray: none;
+                      stroke-opacity: 1;
+                      "
+                      d="m 131.89082,104.72227 -29.43641,29.43641"
+                      id="path843"
+                      />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="digits" onclick="button('4')">
+          4
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('5')">
+          5
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('6')">
+          6
+        </div>
+        </td>
+        <td><div onclick="button('×')">
+          ×
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div class="digits" onclick="button('1')">
+          1
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('2')">
+          2
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('3')">
+          3
+        </div>
+        </td>
+        <td><div onclick="button('+')">
+          +
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div onclick="button('.')">
+          .
+        </div>
+        </td>
+        <td><div class="digits" onclick="button('0')">
+          0
+        </div>
+        </td>
+        <td><div onclick="button('-')">
+          -
+        </div>
+        </td>
+        <td><div onclick="button('=')">
+          =
+        </div>
+        </td>
+      </tr>
+    </table>
+  </section>
+</body>
+</html>
