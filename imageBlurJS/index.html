@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fast Image Blurring in Javascript</title>
+  <title>Fast Blurring in Javascript</title>
   <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <hr />
@@ -23,7 +24,7 @@
     </section>
     <hr />
     <section>
-      <label
+      <!-- <label
         for="box"
         title="The basic box blur can be very slow, especially at higher blur radiuses and for bigger images. As such, it could freeze your browser tab"
         >
@@ -37,28 +38,31 @@
       <label for="box3">
         <input type="radio" id="box3" name="algorithm" value="box3" />
         Optimized Box Blur 2
-      </label>
+      </label> -->
       <label for="box4">
         <input type="radio" id="box4" name="algorithm" value="box4" />
-        Multiplied Box Blur
+        <!-- Multiplied Box Blur -->
+        Boxblur
       </label>
-      <br />
-      <label for="stack">
+      <!-- <br /> -->
+      <!-- <label for="stack">
         <input type="radio" id="stack" name="algorithm" value="stack" />
         Stackblur
       </label>
       <label for="stack3">
         <input type="radio" id="stack3" name="algorithm" value="stack3" />
         Multiplied Stackblur
-      </label>
+      </label> -->
       <label for="stack2">
-        <input type="radio" id="stack2" name="algorithm" value="stack2" checked/>
-        Optimized Stackblur
+        <input type="radio" id="stack2" name="algorithm" value="stack2" />
+        <!-- Optimized Stackblur -->
+        Stackblur
       </label>
-      <br />
+      <!-- <br /> -->
       <label for="gaussian">
         <input type="radio" id="gaussian" name="algorithm" value="gaussian" />
-        Faux Gaussian Blur
+        <!-- Faux Gaussian Blur -->
+        Gaussian Blur
       </label>
     </section>
     <hr />
@@ -83,14 +87,5 @@
     </section>
     <hr />
   </main>
-  <script src="./algorithms/boxBlur.js"></script>
-  <script src="./algorithms/boxBlur2.js"></script>
-  <script src="./algorithms/boxBlur3.js"></script>
-  <script src="./algorithms/boxBlur4.js"></script>
-  <script src="./algorithms/stackBlur.js"></script>
-  <script src="./algorithms/stackBlur2.js"></script>
-  <script src="./algorithms/stackBlur3.js"></script>
-  <script src="./algorithms/gaussianBlur.js"></script>
-  <script src="./script.js"></script>
 </body>
 </html>
