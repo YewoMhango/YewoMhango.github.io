@@ -7,4 +7,4 @@ You can check out my live personal projects here:
 3. [scientificCalculatorJS](https://yewomhango.github.io/scientificCalculatorJS/index.html) ([Github link](https://github.com/YewoMhango/scientificCalculatorJS))
 4. [XandO](https://yewomhango.github.io/XandO/index.html) ([Github link](https://github.com/YewoMhango/XandO))
 
-Also check out [keepitmusic](http://keepitmusic.com)
+Related site: [keepitmusic](http://keepitmusic.com)
