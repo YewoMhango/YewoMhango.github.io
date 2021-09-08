@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>Random Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <br />
+      <div class="palette">
+        <div class="color0"></div>
+        <div class="color1"></div>
+        <div class="color2"></div>
+        <div class="color3"></div>
+        <div class="color4"></div>
+        <div class="color5"></div>
+        <div class="color6"></div>
+        <div class="color7"></div>
+        <div class="color8"></div>
+        <div class="color9"></div>
+      </div>
+      <p>
+        Number of Colors: 
+        <input type="range" id="numColors" value="5" min="1" max="10"/> 
+        <span class="colorNumDisp">5</span> 
+        <br />
+      </p>
+      <p>
+        <h1>Color Codes</h1>
+        <div class="colorCodes"></div>
+      </p>
+      <p class="buttons">
+        <button class="execButton" onclick="execute()">Generate Pallete</button>
+        <button class="helpButton" onclick="tip()">
+          Tip
+        </button>
+      </p>
+    </main>
+    <aside>
+      <div>
+        <h1>Useful Tip</h1>
+        <p>
+          Click on a color you like to lock it in place and prevent it from changing when you generate a new palette
+        </p>
+          <svg
+             xmlns:svg="http://www.w3.org/2000/svg"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 337.91071 179.1835"
+             version="1.1"
+             id="svg8">
+            <g
+               transform="translate(69.547623)"
+               id="layer1">
+              <rect
+                 style="opacity:1;fill:#6dce7b;stroke-width:1.09432;stroke-linecap:square"
+                 id="rect10"
+                 width="102.6369"
+                 height="146.65477"
+                 x="-69.547623"
+                 y="1.1807396e-06" />
+              <rect
+                 y="1.1807396e-06"
+                 x="33.089279"
+                 height="146.65477"
+                 width="132.6369"
+                 id="rect12"
+                 style="opacity:1;fill:#1e6399;fill-opacity:1;stroke-width:1.09432;stroke-linecap:square" />
+              <rect
+                 style="opacity:1;fill:#db89dd;fill-opacity:1;stroke-width:1.09432;stroke-linecap:square"
+                 id="rect14"
+                 width="112.6369"
+                 height="146.65477"
+                 x="165.72618"
+                 y="1.1807396e-06" />
+              <ellipse
+                 style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke-width:1.06141;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none"
+                 id="path851"
+                 cx="102.56177"
+                 cy="123.18606"
+                 rx="24.168987"
+                 ry="23.46871" />
+              <path
+                 id="path841"
+                 style="fill:#ffffff;fill-opacity:1;
+                   stroke:#000000;stroke-width:1.32503;
+                   stroke-linecap:butt;stroke-linejoin:miter;
+                   stroke-miterlimit:4;
+                   stroke-dasharray:none;stroke-opacity:1"
+                 d="m 102.56177,123.18607 v 46.41272 
+                   l 13.16729,-9.30713 8.53267,18.00946 
+                   5.39414,-2.55569 -8.37796,-17.68368
+                   14.64285,-2.48324 z" />
+              <path
+              id="rect853"
+              style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.17201;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 d="m 99.444112,50.069268 c -7.511198,-1.16e-4 -13.600255,6.088941 -13.60014,13.600138 v 7.213627 H 81.264566 V 96.585505 H 117.5509 V 70.883033 h -4.50706 v -7.213627 c 1.1e-4,-7.511036 -6.08869,-13.600024 -13.599728,-13.600138 z m -0.04465,4.514914 c 0.01488,-3.8e-5 0.02977,-3.8e-5 0.04465,0 5.017628,2.3e-5 9.085198,4.067603 9.085228,9.085224 v 7.213627 H 90.358886 v -7.213627 c -3.6e-5,-5.000236 4.040401,-9.060628 9.040576,-9.085224 z"
+                  />
+                </g>
+          </svg>
+          <br />
+        <button onclick="tip(false)">
+          Close
+        </button>
+      </div>
+    </aside>
+  </body>
+</html>
