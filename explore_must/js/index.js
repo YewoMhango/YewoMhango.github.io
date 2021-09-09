@@ -173,6 +173,9 @@ function main() {
                                                     var fromPoint = findNearestPoint(position.coords.latitude, position.coords.longitude);
                                                     console.log(position);
                                                     console.log(fromPoint);
+                                                    if (fromPoint.distance > 0.0045) {
+alert("You're too far away from MUST, so the result may be meaningless")
+}
                                                     var from = fromPoint.id;
                                                     var to = Number(toSelector.value);
                                                     if (!Number.isNaN(from) && !Number.isNaN(to)) {
