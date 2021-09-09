@@ -171,9 +171,6 @@ function main() {
                                                         return;
                                                     }
                                                     var fromPoint = findNearestPoint(position.coords.latitude, position.coords.longitude);
-                                                    if (fromPoint.distance > 0.0045) {
-                                                        alert("You're too far away from MUST, so the result may be meaningless");
-                                                    }
                                                     console.log(position);
                                                     console.log(fromPoint);
                                                     var from = fromPoint.id;
@@ -181,9 +178,6 @@ function main() {
                                                     if (!Number.isNaN(from) && !Number.isNaN(to)) {
                                                         calculateShortestPath(from, to);
                                                     }
-                                                }, function (error) {
-                                                    alert("Geolocation failed: " + error.message);
-                                                    console.log(error);
                                                 });
                                             }
                                             else {
