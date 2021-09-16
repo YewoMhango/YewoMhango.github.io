@@ -22,13 +22,13 @@ body,
 }
 @keyframes shimering {
   0% {
-    background-color: #ccc;
+    background-color: #dddddd;
   }
   50% {
-    background-color: #eee;
+    background-color: #eeeeee;
   }
   100% {
-    background-color: #ccc;
+    background-color: #dddddd;
   }
 }
 .leaflet-popup-content h2,
@@ -150,7 +150,7 @@ button.directions {
   padding: 0;
   background-color: transparent;
   margin: 10px;
-  cursor: pointer;
+  cursor: pointer; 
   width: 10vh;
   height: 10vh;
   min-width: 50px;
