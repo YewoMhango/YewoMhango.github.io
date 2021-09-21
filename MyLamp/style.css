@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(231, 231, 231);
+  /* height: 100%; */
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 690px;
+  margin: 0;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(194, 194, 194);
+  border-radius: 5px;
+}
+
+main > div {
+  margin: 40px 20px;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+}
+
+.header div {
+  padding: 0 10px;
+}
+.header h2 {
+  margin: 6px 0;
+}
+
+.header a {
+  color: grey;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.downloadButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.downloadButton:hover {
+  background-color: rgb(0, 97, 0);
+}
+
+.screenshotsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.screenshotsContainer > button {
+  background-color: white;
+  box-shadow: 0 0 5px grey;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border: none;
+  border-radius: 30px;
+}
+
+.screenshotsContainer > button svg {
+  height: 50%;
+  width: 50%;
+  fill: rgb(51, 51, 51);
+}
+
+.screenshotsContainer .scrollToRight {
+  right: 0;
+}
+
+.screenshots {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.screenshots img {
+  height: 100%;
+  margin: 5px;
+}
+
+.screenshots a {
+  height: 100%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0;
+    background-color: white;
+  }
+  main {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+}
