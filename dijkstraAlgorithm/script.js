@@ -10,121 +10,115 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var vertices = [
-    {
-        id: 1,
-        name: "A",
-        x: 351,
-        y: 358,
-        adjacentVertices: [6, 8],
-    },
-    {
-        id: 2,
-        name: "B",
-        x: 440,
-        y: 170,
-        adjacentVertices: [2, 3, 4, 6],
-    },
-    {
-        id: 3,
-        name: "C",
-        x: 460,
-        y: 27,
-        adjacentVertices: [2, 5],
-    },
-    {
-        id: 4,
-        name: "D",
-        x: 634,
-        y: 279,
-        adjacentVertices: [2, 8],
-    },
-    {
-        id: 5,
-        name: "E",
-        x: 848,
-        y: 195,
-        adjacentVertices: [3, 8],
-    },
-    {
-        id: 6,
-        name: "F",
-        x: 80,
-        y: 101,
-        adjacentVertices: [1, 2, 7],
-    },
-    {
-        id: 7,
-        name: "G",
-        x: 60,
-        y: 300,
-        adjacentVertices: [6],
-    },
-    {
-        id: 8,
-        name: "H",
-        x: 750,
-        y: 400,
-        adjacentVertices: [1, 4, 5],
-    },
-];
-var locationNames = ["A", "B", "C", "D", "E", "F", "G", "H"];
-var canvas = create("canvas", { width: 900, height: 500 });
-var fromSelector = create("select", null, locationNames.map(function (s) {
-    var _a;
-    return create("option", {
-        value: (_a = vertices.find(function (val) { return val.name == s; })) === null || _a === void 0 ? void 0 : _a.id,
-        innerText: s,
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-}));
-var toSelector = create("select", null, locationNames.map(function (s) {
-    var _a;
-    return create("option", {
-        value: (_a = vertices.find(function (val) { return val.name == s; })) === null || _a === void 0 ? void 0 : _a.id,
-        innerText: s,
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+main();
+function main() {
+    return __awaiter(this, void 0, void 0, function () {
+        var vertices, canvas, fromSelector, toSelector, div;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, fetch("./vertices.json").then(function (data) {
+                        return data.json();
+                    })];
+                case 1:
+                    vertices = _a.sent();
+                    canvas = create("canvas", {
+                        width: 900,
+                        height: 500,
+                    });
+                    fromSelector = create("select", null, vertices.map(function (val) {
+                        return create("option", {
+                            value: val.name,
+                            innerText: val.name,
+                        });
+                    }));
+                    toSelector = create("select", null, vertices.map(function (val) {
+                        return create("option", {
+                            value: val.name,
+                            innerText: val.name,
+                        });
+                    }));
+                    div = create("div", null, [
+                        canvas,
+                        create("br"),
+                        create("div", { className: "controls" }, [
+                            create("span", null, ["From: ", fromSelector]),
+                            create("span", null, ["To: ", toSelector]),
+                            create("button", {
+                                innerText: "▶ Find Shortest Path",
+                                onclick: function () {
+                                    var ctx = canvas.getContext("2d");
+                                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                    displayBaseLines(canvas, vertices);
+                                    var from = fromSelector.value;
+                                    var to = toSelector.value;
+                                    displayShortestPath(from, to, canvas, vertices);
+                                    displayNodes(canvas, vertices);
+                                },
+                            }),
+                        ]),
+                    ]);
+                    document.body.appendChild(div);
+                    displayBaseLines(canvas, vertices);
+                    displayNodes(canvas, vertices);
+                    return [2 /*return*/];
+            }
+        });
     });
-}));
-var div = create("div", null, [
-    canvas,
-    create("br"),
-    create("div", { className: "controls" }, [
-        create("span", null, ["From: ", fromSelector]),
-        create("span", null, ["To: ", toSelector]),
-        create("button", {
-            innerText: "▶ Find Shortest Path",
-            onclick: function () {
-                var ctx = canvas.getContext("2d");
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                displayBaseLines();
-                var from = Number(fromSelector.value);
-                var to = Number(toSelector.value);
-                displayShortestPath(from, to);
-                displayNodes();
-            },
-        }),
-    ]),
-]);
-document.body.appendChild(div);
-displayBaseLines();
-displayNodes();
-function displayBaseLines() {
+}
+function displayBaseLines(canvas, vertices) {
     var ctx = canvas.getContext("2d");
     for (var _i = 0, vertices_1 = vertices; _i < vertices_1.length; _i++) {
         var vertex = vertices_1[_i];
         var x = vertex.x, y = vertex.y, adjacentVertices = vertex.adjacentVertices;
-        var _loop_1 = function (id) {
-            var adjVertex = vertices.find(function (v) { return id == v.id; });
+        var _loop_1 = function (name_1) {
+            var adjVertex = vertices.find(function (v) { return name_1 == v.name; });
             ctx.moveTo(x, y);
             ctx.lineTo(adjVertex.x, adjVertex.y);
             ctx.stroke();
         };
         for (var _a = 0, adjacentVertices_1 = adjacentVertices; _a < adjacentVertices_1.length; _a++) {
-            var id = adjacentVertices_1[_a];
-            _loop_1(id);
+            var name_1 = adjacentVertices_1[_a];
+            _loop_1(name_1);
         }
     }
 }
-function displayShortestPath(from, to) {
+function displayShortestPath(from, to, canvas, vertices) {
     if (from == to)
         return;
     var ctx = canvas.getContext("2d");
@@ -141,12 +135,12 @@ function displayShortestPath(from, to) {
     ctx.lineWidth = 1;
     ctx.strokeStyle = "black";
 }
-function displayNodes() {
+function displayNodes(canvas, vertices) {
     var ctx = canvas.getContext("2d");
     ctx.font = "28px 'Open Sans'";
     for (var _i = 0, vertices_2 = vertices; _i < vertices_2.length; _i++) {
         var v = vertices_2[_i];
-        var x = v.x, y = v.y, name_1 = v.name;
+        var x = v.x, y = v.y, name_2 = v.name;
         ctx.strokeStyle = "black";
         ctx.fillStyle = "black";
         ctx.moveTo(x, y);
@@ -155,8 +149,8 @@ function displayNodes() {
         ctx.fill();
         ctx.strokeStyle = "white";
         ctx.fillStyle = "white";
-        ctx.fillText(name_1, x - 9, y + 10);
-        ctx.strokeText(name_1, x - 9, y + 10);
+        ctx.fillText(name_2, x - 9, y + 10);
+        ctx.strokeText(name_2, x - 9, y + 10);
     }
     ctx.strokeStyle = "black";
     ctx.fillStyle = "black";
@@ -166,13 +160,13 @@ function dijkstra(vertices, from, to) {
     var results = new Map();
     for (var _i = 0, vertices_3 = vertices; _i < vertices_3.length; _i++) {
         var v = vertices_3[_i];
-        graphNodes.set(v.id, __assign({ distance: Infinity, previous: undefined }, v));
+        graphNodes.set(v.name, __assign({ distance: Infinity, previous: undefined }, v));
     }
     graphNodes.get(from).distance = 0;
     while (graphNodes.size > 0) {
         var u = minimumDistanceNode(graphNodes);
-        results.set(u.id, u);
-        graphNodes.delete(u.id);
+        results.set(u.name, u);
+        graphNodes.delete(u.name);
         for (var _a = 0, _b = u.adjacentVertices; _a < _b.length; _a++) {
             var adjNodeId = _b[_a];
             if (graphNodes.has(adjNodeId)) {
@@ -180,7 +174,7 @@ function dijkstra(vertices, from, to) {
                 var alt = u.distance + distanceBetween(u, v);
                 if (alt < v.distance) {
                     v.distance = alt;
-                    v.previous = u.id;
+                    v.previous = u.name;
                 }
             }
         }

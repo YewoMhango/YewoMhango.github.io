@@ -1,0 +1,158 @@
+[
+  {
+    "name": "A",
+    "x": 707,
+    "y": 289,
+    "adjacentVertices": ["N", "Q", "E", "P", "S"]
+  },
+  {
+    "name": "B",
+    "x": 51,
+    "y": 233,
+    "adjacentVertices": ["L", "H"]
+  },
+  {
+    "name": "C",
+    "x": 365,
+    "y": 317,
+    "adjacentVertices": ["Y", "T", "F", "D"]
+  },
+  {
+    "name": "D",
+    "x": 505,
+    "y": 192,
+    "adjacentVertices": ["I", "C"]
+  },
+  {
+    "name": "E",
+    "x": 714,
+    "y": 368,
+    "adjacentVertices": ["A", "G"]
+  },
+  {
+    "name": "F",
+    "x": 507,
+    "y": 346,
+    "adjacentVertices": ["I", "K", "C", "T"]
+  },
+  {
+    "name": "G",
+    "x": 688,
+    "y": 407,
+    "adjacentVertices": ["E", "P"]
+  },
+  {
+    "name": "H",
+    "x": 146,
+    "y": 151,
+    "adjacentVertices": ["B", "U", "R"]
+  },
+  {
+    "name": "I",
+    "x": 562,
+    "y": 229,
+    "adjacentVertices": ["F", "D", "X"]
+  },
+  {
+    "name": "J",
+    "x": 247,
+    "y": 218,
+    "adjacentVertices": ["U", "Y", "Z"]
+  },
+  {
+    "name": "K",
+    "x": 542,
+    "y": 385,
+    "adjacentVertices": ["F"]
+  },
+  {
+    "name": "L",
+    "x": 161,
+    "y": 260,
+    "adjacentVertices": ["U", "B"]
+  },
+  {
+    "name": "M",
+    "x": 681,
+    "y": 132,
+    "adjacentVertices": ["V", "Q"]
+  },
+  {
+    "name": "N",
+    "x": 619,
+    "y": 222,
+    "adjacentVertices": ["X", "A", "Q"]
+  },
+  {
+    "name": "O",
+    "x": 601,
+    "y": 96,
+    "adjacentVertices": ["V"]
+  },
+  {
+    "name": "P",
+    "x": 651,
+    "y": 351,
+    "adjacentVertices": ["A", "G"]
+  },
+  {
+    "name": "Q",
+    "x": 732,
+    "y": 206,
+    "adjacentVertices": ["S", "M", "N", "A"]
+  },
+  {
+    "name": "R",
+    "x": 196,
+    "y": 139,
+    "adjacentVertices": ["H"]
+  },
+  {
+    "name": "S",
+    "x": 841,
+    "y": 218,
+    "adjacentVertices": ["Q", "A"]
+  },
+  {
+    "name": "T",
+    "x": 383,
+    "y": 424,
+    "adjacentVertices": ["W", "C", "F"]
+  },
+  {
+    "name": "U",
+    "x": 199,
+    "y": 217,
+    "adjacentVertices": ["H", "J", "L"]
+  },
+  {
+    "name": "V",
+    "x": 611,
+    "y": 142,
+    "adjacentVertices": ["O", "M", "X"]
+  },
+  {
+    "name": "W",
+    "x": 279,
+    "y": 423,
+    "adjacentVertices": ["Y", "T"]
+  },
+  {
+    "name": "X",
+    "x": 577,
+    "y": 173,
+    "adjacentVertices": ["V", "I", "N"]
+  },
+  {
+    "name": "Y",
+    "x": 302,
+    "y": 309,
+    "adjacentVertices": ["J", "C", "W"]
+  },
+  {
+    "name": "Z",
+    "x": 311,
+    "y": 120,
+    "adjacentVertices": ["J"]
+  }
+]
