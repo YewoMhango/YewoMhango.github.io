@@ -76,11 +76,11 @@
     <script>
       function scrollToRight() {
         let screenshots = document.querySelector(".screenshots");
-        screenshots.scrollLeft += 385.267;
+        screenshots.scrollLeft += screenshots.getBoundingClientRect().width;
       }
       function scrollToLeft() {
         let screenshots = document.querySelector(".screenshots");
-        screenshots.scrollLeft -= 385.267;
+        screenshots.scrollLeft -= screenshots.getBoundingClientRect().width;
       }
     </script>
   </body>

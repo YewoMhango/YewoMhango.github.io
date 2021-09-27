@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
 * {
   box-sizing: border-box;
   transition: 0.2s ease;
@@ -103,20 +101,22 @@ main > div {
 }
 
 .screenshots {
-  height: 200px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
 }
 
 .screenshots img {
-  height: 100%;
-  margin: 5px;
+  width: 100%;
+  /* margin: 5px; */
 }
 
 .screenshots a {
-  height: 100%;
+  /* height: 100%; */
+  width: 620px;
   display: inline-block;
+  flex-shrink: 0;
+  margin: 5px;
 }
 
 @media screen and (max-width: 700px) {
@@ -128,5 +128,8 @@ main > div {
     border-radius: 0;
     box-shadow: none;
     padding: 0;
+  }
+  .screenshots a {
+    width: calc(100% - 10px);
   }
 }
