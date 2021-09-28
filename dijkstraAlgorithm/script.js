@@ -137,7 +137,7 @@ function displayShortestPath(from, to, canvas, vertices) {
 }
 function displayNodes(canvas, vertices) {
     var ctx = canvas.getContext("2d");
-    ctx.font = "28px 'Open Sans'";
+    ctx.font = "24px 'Open sans'";
     for (var _i = 0, vertices_2 = vertices; _i < vertices_2.length; _i++) {
         var v = vertices_2[_i];
         var x = v.x, y = v.y, name_2 = v.name;
@@ -145,7 +145,7 @@ function displayNodes(canvas, vertices) {
         ctx.fillStyle = "black";
         ctx.moveTo(x, y);
         ctx.beginPath();
-        ctx.arc(x, y, 18, 0, 7);
+        ctx.arc(x, y, 16, 0, 7);
         ctx.fill();
         ctx.strokeStyle = "white";
         ctx.fillStyle = "white";
