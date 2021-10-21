@@ -4,6 +4,7 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "id": 0, "name": "admin", "adjacents": "64,69" }, "geometry": { "type": "Point", "coordinates": [ 35.216960433190678, -15.902524037332192 ] } },
+{ "type": "Feature", "properties": { "id": 97, "name": "bus stop", "adjacents": "95" }, "geometry": { "type": "Point", "coordinates": [ 35.211744654103619, -15.90056411471028 ] } },
 { "type": "Feature", "properties": { "id": 1, "name": "auditorium", "adjacents": "73" }, "geometry": { "type": "Point", "coordinates": [ 35.217002206320103, -15.903452687552383 ] } },
 { "type": "Feature", "properties": { "id": 2, "name": "soccer", "adjacents": "88,92" }, "geometry": { "type": "Point", "coordinates": [ 35.216047893519963, -15.905008412913803 ] } },
 { "type": "Feature", "properties": { "id": 3, "name": "basketball", "adjacents": "4,90" }, "geometry": { "type": "Point", "coordinates": [ 35.216256736571225, -15.906258149221085 ] } },
@@ -96,7 +97,6 @@
 { "type": "Feature", "properties": { "id": 90, "name": null, "adjacents": "88,91,3" }, "geometry": { "type": "Point", "coordinates": [ 35.216612452749914, -15.905883553161049 ] } },
 { "type": "Feature", "properties": { "id": 91, "name": null, "adjacents": "90,89" }, "geometry": { "type": "Point", "coordinates": [ 35.216754338924403, -15.905965839131968 ] } },
 { "type": "Feature", "properties": { "id": 92, "name": null, "adjacents": "2,4" }, "geometry": { "type": "Point", "coordinates": [ 35.215586503280612, -15.905826136726279 ] } },
-{ "type": "Feature", "properties": { "id": 97, "name": "bus stop", "adjacents": "95" }, "geometry": { "type": "Point", "coordinates": [ 35.211744654103619, -15.90056411471028 ] } },
 { "type": "Feature", "properties": { "id": 95, "name": null, "adjacents": "97,96" }, "geometry": { "type": "Point", "coordinates": [ 35.212281636767003, -15.900476210527417 ] } },
 { "type": "Feature", "properties": { "id": 96, "name": null, "adjacents": "93,95" }, "geometry": { "type": "Point", "coordinates": [ 35.214246764811691, -15.901959588467081 ] } },
 { "type": "Feature", "properties": { "id": 93, "name": null, "adjacents": "7,94,96" }, "geometry": { "type": "Point", "coordinates": [ 35.215115077203535, -15.902849609979191 ] } },
