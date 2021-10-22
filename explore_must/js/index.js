@@ -63,6 +63,7 @@ function main() {
                 color: "red",
                 weight: 4,
                 opacity: 0.8,
+                dashArray: [4],
             });
             var destination = allVertices.find(function (v) { return v.id == to; });
             var circle1 = L.circle([destination.y, destination.x], {
