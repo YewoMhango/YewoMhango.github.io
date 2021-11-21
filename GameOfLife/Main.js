@@ -5262,8 +5262,8 @@ var $elm$core$Array$fromList = function (list) {
 		return A3($elm$core$Array$fromListHelp, list, _List_Nil, 0);
 	}
 };
-var $author$project$Main$gameHeight = 30;
-var $author$project$Main$gameWidth = 30;
+var $author$project$Main$gameHeight = 50;
+var $author$project$Main$gameWidth = 50;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $elm$core$List$repeatHelp = F3(
