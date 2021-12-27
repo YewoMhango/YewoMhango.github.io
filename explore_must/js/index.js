@@ -53,8 +53,28 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
 };
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        function calculateShortestPath(from, to, zoomToLine) {
+        function calculateShortestPath(from, to, zoomToLine, userLocation) {
             pathLayerGroup.clearLayers();
+            if (userLocation) {
+                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "transparent",
+                    fillColor: "#15f",
+                    fillOpacity: 0.3,
+                    radius: userLocation.accuracy,
+                }));
+                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "white",
+                    radius: 0,
+                    stroke: true,
+                    weight: 13,
+                }));
+                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "#15f",
+                    radius: 0,
+                    stroke: true,
+                    weight: 10,
+                }));
+            }
             var shortestPath = dijkstra(allVertices, from, to).map(function (value) { return [
                 value.y,
                 value.x,
@@ -207,7 +227,7 @@ function main() {
                                                     var to = Number(toSelector.value);
                                                     if (!Number.isNaN(from) && !Number.isNaN(to)) {
                                                         console.log(watchCallbackCount);
-                                                        calculateShortestPath(from, to, watchCallbackCount++ == 0);
+                                                        calculateShortestPath(from, to, watchCallbackCount++ == 0, position.coords);
                                                         console.log(watchCallbackCount);
                                                     }
                                                 }, function (error) {
