@@ -55,26 +55,6 @@ function main() {
     return __awaiter(this, void 0, void 0, function () {
         function calculateShortestPath(from, to, zoomToLine, userLocation) {
             pathLayerGroup.clearLayers();
-            if (userLocation) {
-                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
-                    color: "transparent",
-                    fillColor: "#15f",
-                    fillOpacity: 0.3,
-                    radius: userLocation.accuracy,
-                }));
-                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
-                    color: "white",
-                    radius: 0,
-                    stroke: true,
-                    weight: 13,
-                }));
-                pathLayerGroup.addLayer(L.circle([userLocation.latitude, userLocation.longitude], {
-                    color: "#15f",
-                    radius: 0,
-                    stroke: true,
-                    weight: 10,
-                }));
-            }
             var shortestPath = dijkstra(allVertices, from, to).map(function (value) { return [
                 value.y,
                 value.x,
@@ -85,22 +65,45 @@ function main() {
                 opacity: 0.8,
             });
             var destination = allVertices.find(function (v) { return v.id == to; });
-            var circle1 = L.circle([destination.y, destination.x], {
+            var destinationCircle1 = L.circle([destination.y, destination.x], {
                 color: "transparent",
                 fillColor: "red",
                 fillOpacity: 0.6,
                 radius: 4,
             });
-            var circle2 = L.circle([destination.y, destination.x], {
+            var destinationCircle2 = L.circle([destination.y, destination.x], {
                 color: "transparent",
                 fillColor: "red",
                 fillOpacity: 0.5,
                 radius: 6,
             });
+            if (userLocation) {
+                var userCircle1 = L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "transparent",
+                    fillColor: "#15f",
+                    fillOpacity: 0.3,
+                    radius: userLocation.accuracy,
+                });
+                var userCircle2 = L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "white",
+                    radius: 0,
+                    stroke: true,
+                    weight: 13,
+                });
+                var userCircle3 = L.circle([userLocation.latitude, userLocation.longitude], {
+                    color: "#15f",
+                    radius: 0,
+                    stroke: true,
+                    weight: 10,
+                });
+                pathLayerGroup.addLayer(userCircle1);
+                pathLayerGroup.addLayer(userCircle2);
+                pathLayerGroup.addLayer(userCircle3);
+            }
             layersControl.removeLayer(pathLayerGroup);
             pathLayerGroup.addLayer(polyline);
-            pathLayerGroup.addLayer(circle1);
-            pathLayerGroup.addLayer(circle2);
+            pathLayerGroup.addLayer(destinationCircle1);
+            pathLayerGroup.addLayer(destinationCircle2);
             layersControl.addOverlay(pathLayerGroup, "Suggested Path");
             if (zoomToLine) {
                 map.fitBounds(polyline.getBounds());
@@ -142,10 +145,17 @@ function main() {
                     namedLocations = geojsonData.features.filter(function (val) { return val.properties.name !== null; });
                     importantLocations = namedLocations.map(function (value) {
                         var _a = popupConfigData[value.properties.name], fullName = _a.fullName, image = _a.image, description = _a.description;
-                        return L.marker([
-                            value.geometry.coordinates[1],
-                            value.geometry.coordinates[0],
-                        ]).bindPopup("<img src=\"./images/" + (image == "" ? "no picture yet.svg" : image) + "\"><h2>" + fullName + "</h2><p>" + description + "</p>");
+                        return L.marker([value.geometry.coordinates[1], value.geometry.coordinates[0]], {
+                            icon: L.icon({
+                                iconUrl: "./images/marker-icon.png",
+                                shadowUrl: "./images/marker-shadow.png",
+                                iconSize: [25, 41],
+                                shadowSize: [41, 41],
+                                iconAnchor: [13, 41],
+                                shadowAnchor: [13, 41],
+                                popupAnchor: [0, -41], // point from which the popup should open relative to the iconAnchor
+                            }),
+                        }).bindPopup("<img src=\"./images/" + (image == "" ? "no picture yet.svg" : image) + "\"><h2>" + fullName + "</h2><p>" + description + "</p>");
                     });
                     console.log(importantLocations);
                     L.tileLayer("http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {

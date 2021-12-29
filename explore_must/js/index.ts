@@ -56,10 +56,20 @@ async function main() {
       value.properties.name as string
     ] as PopupConfigDataValue;
 
-    return L.marker([
-      value.geometry.coordinates[1],
-      value.geometry.coordinates[0],
-    ]).bindPopup(
+    return L.marker(
+      [value.geometry.coordinates[1], value.geometry.coordinates[0]],
+      {
+        icon: L.icon({
+          iconUrl: "./images/marker-icon.png",
+          shadowUrl: "./images/marker-shadow.png",
+          iconSize: [25, 41], // size of the icon
+          shadowSize: [41, 41], // size of the shadow
+          iconAnchor: [13, 41], // point of the icon which will correspond to marker's location
+          shadowAnchor: [13, 41], // the same for the shadow
+          popupAnchor: [0, -41], // point from which the popup should open relative to the iconAnchor
+        }),
+      }
+    ).bindPopup(
       `<img src="./images/${
         image == "" ? "no picture yet.svg" : image
       }"><h2>${fullName}</h2><p>${description}</p>`
@@ -267,35 +277,6 @@ async function main() {
   ) {
     pathLayerGroup.clearLayers();
 
-    if (userLocation) {
-      pathLayerGroup.addLayer(
-        L.circle([userLocation.latitude, userLocation.longitude], {
-          color: "transparent",
-          fillColor: "#15f",
-          fillOpacity: 0.3,
-          radius: userLocation.accuracy,
-        })
-      );
-
-      pathLayerGroup.addLayer(
-        L.circle([userLocation.latitude, userLocation.longitude], {
-          color: "white",
-          radius: 0,
-          stroke: true,
-          weight: 13,
-        })
-      );
-
-      pathLayerGroup.addLayer(
-        L.circle([userLocation.latitude, userLocation.longitude], {
-          color: "#15f",
-          radius: 0,
-          stroke: true,
-          weight: 10,
-        })
-      );
-    }
-
     let shortestPath = dijkstra(allVertices, from, to).map((value) => [
       value.y,
       value.x,
@@ -309,25 +290,61 @@ async function main() {
 
     let destination = allVertices.find((v) => v.id == to) as Vertex;
 
-    let circle1 = L.circle([destination.y, destination.x], {
+    let destinationCircle1 = L.circle([destination.y, destination.x], {
       color: "transparent",
       fillColor: "red",
       fillOpacity: 0.6,
       radius: 4,
     });
 
-    let circle2 = L.circle([destination.y, destination.x], {
+    let destinationCircle2 = L.circle([destination.y, destination.x], {
       color: "transparent",
       fillColor: "red",
       fillOpacity: 0.5,
       radius: 6,
     });
 
+    if (userLocation) {
+      let userCircle1 = L.circle(
+        [userLocation.latitude, userLocation.longitude],
+        {
+          color: "transparent",
+          fillColor: "#15f",
+          fillOpacity: 0.3,
+          radius: userLocation.accuracy,
+        }
+      );
+
+      let userCircle2 = L.circle(
+        [userLocation.latitude, userLocation.longitude],
+        {
+          color: "white",
+          radius: 0,
+          stroke: true,
+          weight: 13,
+        }
+      );
+
+      let userCircle3 = L.circle(
+        [userLocation.latitude, userLocation.longitude],
+        {
+          color: "#15f",
+          radius: 0,
+          stroke: true,
+          weight: 10,
+        }
+      );
+
+      pathLayerGroup.addLayer(userCircle1);
+      pathLayerGroup.addLayer(userCircle2);
+      pathLayerGroup.addLayer(userCircle3);
+    }
+
     layersControl.removeLayer(pathLayerGroup);
 
     pathLayerGroup.addLayer(polyline);
-    pathLayerGroup.addLayer(circle1);
-    pathLayerGroup.addLayer(circle2);
+    pathLayerGroup.addLayer(destinationCircle1);
+    pathLayerGroup.addLayer(destinationCircle2);
     layersControl.addOverlay(pathLayerGroup, "Suggested Path");
 
     if (zoomToLine) {
