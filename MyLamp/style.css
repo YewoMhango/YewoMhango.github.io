@@ -53,7 +53,7 @@ main > div {
 .downloadButtonContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 
@@ -61,7 +61,7 @@ main > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 30%;
   height: 40px;
   background-color: green;
   color: white;
@@ -117,6 +117,10 @@ main > div {
   display: inline-block;
   flex-shrink: 0;
   margin: 5px;
+}
+
+h3.downloadLinks {
+  text-align: center;
 }
 
 @media screen and (max-width: 700px) {
