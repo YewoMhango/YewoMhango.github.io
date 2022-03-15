@@ -61,7 +61,7 @@ main > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 50%;
   height: 40px;
   background-color: green;
   color: white;
