@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Sen";
+  src: url(./Sen/Sen-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Sen";
+  src: url(./Sen/Sen-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+body {
+  margin: 0;
+  font-family: Sen, sans-serif;
+  color: white;
+  background-color: black;
+}
+
+header,
+section,
+footer {
+  min-height: 100vh;
+}
+
+section,
+footer {
+  padding: 30px;
+}
+
+.semi-transparent {
+  opacity: 0.5;
+}
+
+.gradient-strip {
+  width: 100%;
+  height: 10px;
+  background-color: #5221e6;
+  background: linear-gradient(90deg, #5221e6, #8d21e6);
+}
+
+header,
+footer {
+  background-color: #181823;
+}
+
+header nav {
+  position: relative;
+  z-index: 10;
+  height: 70px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img.logo {
+  height: 100%;
+}
+header nav .right .nav-links-container {
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  top: 70px;
+  left: 0;
+}
+header nav .right .nav-links-container .nav-links {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: -270px;
+  padding: 0;
+  background-color: #181823;
+}
+header nav .right .nav-links-container .nav-links li {
+  width: 100%;
+  height: 90px;
+  display: block;
+  border-bottom: #30303d 1px solid;
+}
+header nav .right .nav-links-container .nav-links li a {
+  font-weight: 600;
+  font-size: smaller;
+  text-decoration: none;
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav .right .nav-links-container .nav-links li a:hover {
+  color: #25c4c4;
+  background-color: #1f1f2b;
+}
+header nav .right .menu-button {
+  height: 70px;
+  width: 70px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+header nav .right .menu-button div {
+  position: absolute;
+  background-color: #8491a0;
+  height: 4px;
+}
+header nav .right .menu-button div.first {
+  top: 27px;
+  left: 17.5px;
+  width: 35px;
+}
+header nav .right .menu-button div.second {
+  top: 39px;
+  left: 27.5px;
+  width: 25px;
+}
+header .content {
+  min-height: calc(100vh - 70px);
+  padding: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+header .content p {
+  font-size: 18px;
+}
+
+header nav.menu-open .right .nav-links-container {
+  height: 270px;
+}
+header nav.menu-open .right .nav-links-container .nav-links {
+  top: 0;
+}
+header nav.menu-open .right .menu-button div {
+  top: 32px;
+  left: 20px;
+}
+header nav.menu-open .right .menu-button div.first {
+  transform: rotate(-45deg);
+  width: 30px;
+}
+header nav.menu-open .right .menu-button div.second {
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+#projects {
+  background-color: #fff3e4;
+}
+
+.animate-slide-in.in-view {
+  animation-name: slide-in;
+}
+
+.animate-expand-in.in-view {
+  animation-name: expand-in;
+}
+
+.animate-slide-in.in-view, .animate-expand-in.in-view {
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes expand-in {
+  0% {
+    transform: scale(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(70%);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

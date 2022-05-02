@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Yewo Mhango</title>
+    </head>
+    <body onscroll="animateOnScroll()">
+        <div class="gradient-strip"></div>
+        <header>
+            <nav>
+                <img class="logo" src="./logo.svg" alt="" />
+                <div class="right">
+                    <div class="nav-links-container">
+                        <ol class="nav-links" type="none">
+                            <li><a href="#skillset"> Skillset </a></li>
+                            <li><a href="#projects"> Projects </a></li>
+                            <li><a href="#contact"> Contact </a></li>
+                        </ol>
+                    </div>
+                    <button
+                        class="menu-button"
+                        onclick="toggleNavMenu(); console.log(event)"
+                    >
+                        <div class="first"></div>
+                        <div class="second"></div>
+                        <script>
+                            function toggleNavMenu() {
+                                let nav = document.querySelector("nav");
+
+                                if (nav.classList.contains("menu-open")) {
+                                    nav.classList.remove("menu-open");
+                                } else {
+                                    nav.classList.add("menu-open");
+                                }
+                            }
+                        </script>
+                    </button>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="animate-slide-in">
+                    <h1>I'm Yewo Mhango,</h1>
+                    <h1>a GIS Specialist</h1>
+                    <h1 class="semi-transparent">based in Malawi.</h1>
+                    <p>
+                        Trained in GIS and Remote Sensing, I'm also an
+                        innovative Software Developer and Graphic Designer
+                    </p>
+                </div>
+            </div>
+        </header>
+        <section id="skillset"></section>
+        <section id="projects"></section>
+        <footer id="contact"></footer>
+        <div class="gradient-strip"></div>
+    </body>
+    <script>
+        let slideInElements = Array.from(
+            document.querySelectorAll(".animate-slide-in")
+        );
+        let expandInElements = Array.from(
+            document.querySelectorAll(".animate-expand-in")
+        );
+
+        animateOnScroll();
+
+        function animateOnScroll() {
+            for (let e of slideInElements) {
+                let inView = isInView(e);
+
+                if (inView && !e.classList.contains("in-view")) {
+                    e.classList.add("in-view");
+                } else if (!inView && e.classList.contains("in-view")) {
+                    e.classList.remove("in-view");
+                }
+            }
+
+            for (let e of expandInElements) {
+                let inView = isInView(e);
+
+                if (inView && !e.classList.contains("in-view")) {
+                    e.classList.add("in-view");
+                } else if (!inView && e.classList.contains("in-view")) {
+                    e.classList.remove("in-view");
+                }
+            }
+        }
+
+        function isInView(domElement) {
+            let rect = domElement.getBoundingClientRect();
+
+            if (
+                (rect.top < 0 && rect.top * -1 > rect.height) ||
+                rect.top > visualViewport.height
+            ) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</html>
