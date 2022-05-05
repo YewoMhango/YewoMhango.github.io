@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="53.659mm" height="42.419mm" version="1.1" viewBox="0 0 53.659 42.419" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#5221e6">
+  <circle transform="rotate(75)" cx="23.066" cy="-26.692" r="3.5"/>
+  <circle transform="rotate(75)" cx="32.485" cy="-43.224" r="3.5"/>
+  <circle transform="rotate(75)" cx="48.744" cy="-31.544" r="3.5"/>
+  <circle transform="rotate(75)" cx="36.239" cy="-12.415" r="3.5"/>
+  <circle transform="rotate(75)" cx="37.301" cy="5.0281" r="3.5"/>
+  <circle transform="rotate(75)" cx="15.754" cy=".5977" r="3.5"/>
+  <circle transform="rotate(75)" cx="9.3649" cy="-21.427" r="3.5"/>
+ </g>
+ <path d="m23.121 3.5-19.621 11.872 1.2974 21.96 16.574-5.5407 21.714 7.1279 7.0734-18.727-18.407-4.8199z" fill="none" stroke="#5221e6" stroke-width="2.5"/>
+</svg>

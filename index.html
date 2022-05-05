@@ -6,91 +6,220 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./style.css" />
-        <title>Yewo Mhango</title>
+        <title>Yewo Mhango - GIS Specialist</title>
     </head>
     <body onscroll="animateOnScroll()">
-        <div class="gradient-strip"></div>
+        <!-- <div class="gradient-strip"></div> -->
         <header>
-            <nav>
-                <img class="logo" src="./logo.svg" alt="" />
-                <div class="right">
-                    <div class="nav-links-container">
-                        <ol class="nav-links" type="none">
-                            <li><a href="#skillset"> Skillset </a></li>
-                            <li><a href="#projects"> Projects </a></li>
-                            <li><a href="#contact"> Contact </a></li>
-                        </ol>
+            <div class="container">
+                <nav>
+                    <img class="logo" src="./img/logo.svg" alt="" />
+                    <div class="right">
+                        <div class="nav-links-container">
+                            <ol class="nav-links" type="none">
+                                <li><a href="#skillset"> Skillset </a></li>
+                                <li><a href="#projects"> Projects </a></li>
+                                <li><a href="#contact"> Contact </a></li>
+                            </ol>
+                        </div>
+                        <button
+                            class="menu-button"
+                            onclick="toggleNavMenu(); console.log(event)"
+                        >
+                            <div class="first"></div>
+                            <div class="second"></div>
+                        </button>
                     </div>
-                    <button
-                        class="menu-button"
-                        onclick="toggleNavMenu(); console.log(event)"
-                    >
-                        <div class="first"></div>
-                        <div class="second"></div>
-                        <script>
-                            function toggleNavMenu() {
-                                let nav = document.querySelector("nav");
-
-                                if (nav.classList.contains("menu-open")) {
-                                    nav.classList.remove("menu-open");
-                                } else {
-                                    nav.classList.add("menu-open");
-                                }
-                            }
-                        </script>
-                    </button>
-                </div>
-            </nav>
-            <div class="content">
-                <div class="animate-slide-in">
-                    <h1>I'm Yewo Mhango,</h1>
-                    <h1>a GIS Specialist</h1>
-                    <h1 class="semi-transparent">based in Malawi.</h1>
-                    <p>
-                        Trained in GIS and Remote Sensing, I'm also an
-                        innovative Software Developer and Graphic Designer
-                    </p>
+                </nav>
+                <div class="content">
+                    <div class="animate-slide-in">
+                        <h1>I'm Yewo Mhango,</h1>
+                        <h1>a GIS Specialist</h1>
+                        <h1 class="semi-transparent">based in Malawi.</h1>
+                        <p>
+                            I'm also an innovative Software Developer and
+                            Graphic Designer
+                        </p>
+                    </div>
                 </div>
             </div>
         </header>
-        <section id="skillset"></section>
-        <section id="projects"></section>
-        <footer id="contact"></footer>
+        <section id="skillset">
+            <div class="main">
+                <h2>Skillset</h2>
+                <p>
+                    I'm currently in 4th year, studying Geo-Information and
+                    Earth Observation Science at MUST. I'm also a self-taught
+                    graphic designer
+                </p>
+                <div class="skills">
+                    <div class="skill animate-expand-in">
+                        <img src="./img/map.svg" alt="" />
+                        <h3>GIS/RS</h3>
+                        <p>
+                            I'm highly proficient in QGIS, but I'm also very
+                            familiar with other GIS tools like ArcGIS, ENVI,
+                            AgiSoft Photoscan, and others
+                        </p>
+                    </div>
+                    <div class="skill animate-expand-in">
+                        <img src="./img/code.svg" alt="" />
+                        <h3>App Development</h3>
+                        <p>
+                            I'm particularly skilled as a frontend developer,
+                            using technologies like Typescript, SASS/SCSS and
+                            Elm. But I'm also familiar with Backend, Mobile and
+                            Desktop app Development
+                        </p>
+                    </div>
+                    <div class="skill animate-expand-in">
+                        <img src="./img/location marker.svg" alt="" />
+                        <h3>GIS App Development</h3>
+                        <p>
+                            I'm proficient in tools for developing custom
+                            GIS-based applications such as Leaflet.js, Django
+                            and PostGIS
+                        </p>
+                    </div>
+                    <div class="skill animate-expand-in">
+                        <img src="./img/design pen.svg" alt="" />
+                        <h3>Graphic Design</h3>
+                        <p>
+                            I have plenty of experience designing logos for
+                            various real-world clients. I also design posters,
+                            music artworks, and t-shirts, among other things
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="column-1">
+                <h2>My Projects</h2>
+                <a href="./explore_must/" class="project animate-expand-in">
+                    <img src="./img/explore_must.jpg" alt="" />
+                    <div class="text">
+                        <h3>Explore Must</h3>
+                        <p>
+                            A basic web app for exploring and navigating around
+                            the MUST Campus
+                        </p>
+                    </div>
+                </a>
+                <a
+                    href="https://github.com/YewoMhango/family_banking"
+                    class="project animate-expand-in"
+                >
+                    <img src="./img/family banking.png" alt="" />
+                    <div class="text">
+                        <h3>Family Banking</h3>
+                        <p>
+                            A desktop app meant to be used for record keeping
+                            for Communal Banking
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="column-2">
+                <a href="./MyLamp/" class="project animate-expand-in">
+                    <img src="./MyLamp/images/3.png" alt="" />
+                    <div class="text">
+                        <h3>MyLamp</h3>
+                        <p>A desktop Bible app made with Electron</p>
+                    </div>
+                </a>
+
+                <a
+                    href="./russianDraughtsVersus/"
+                    class="project animate-expand-in"
+                >
+                    <img src="./img/draughts.jpg" alt="" />
+                    <div class="text">
+                        <h3>Russian Draughts Versus</h3>
+                        <p>
+                            A 2-player game of Russian Draughts meant to be
+                            played on the same device
+                        </p>
+                    </div>
+                </a>
+                <div class="button-container">
+                    <a href="https://github.com/YewoMhango">
+                        VIEW MORE ON GITHUB
+                        <span class="hover-shadow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="logo"><img src="./img/logo.svg" alt="Yewo" /></div>
+            <div class="social-links">
+                <a href="mailto:mhangoyewoh@gmail.com"
+                    ><img src="./img/gmail.svg" alt=""
+                /></a>
+                <a href="https://www.linkedin.com/in/yewo-mhango/"
+                    ><img src="./img/LinkedIn.svg" alt=""
+                /></a>
+                <a href="https://github.com/YewoMhango"
+                    ><img src="./img/github.svg" alt=""
+                /></a>
+            </div>
+            <p class="copyright">
+                Banner photo by
+                <a
+                    href="https://unsplash.com/s/photos/digital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                    >Milad Fakurian</a
+                >
+                | Design based on
+                <a href="https://portfolio-course-rw.webflow.io/"
+                    >Chethan KVS'</a
+                >
+            </p>
+        </footer>
         <div class="gradient-strip"></div>
     </body>
     <script>
-        let slideInElements = Array.from(
+        function toggleNavMenu() {
+            let nav = document.querySelector("nav");
+
+            if (nav.classList.contains("menu-open")) {
+                nav.classList.remove("menu-open");
+            } else {
+                nav.classList.add("menu-open");
+            }
+        }
+
+        let slideElements = Array.from(
             document.querySelectorAll(".animate-slide-in")
         );
-        let expandInElements = Array.from(
+        let expandElements = Array.from(
             document.querySelectorAll(".animate-expand-in")
         );
 
         animateOnScroll();
 
         function animateOnScroll() {
-            for (let e of slideInElements) {
-                let inView = isInView(e);
+            for (let e of slideElements) {
+                let visible = isVisible(e);
 
-                if (inView && !e.classList.contains("in-view")) {
+                if (visible && !e.classList.contains("in-view")) {
                     e.classList.add("in-view");
-                } else if (!inView && e.classList.contains("in-view")) {
+                } else if (!visible && e.classList.contains("in-view")) {
                     e.classList.remove("in-view");
                 }
             }
 
-            for (let e of expandInElements) {
-                let inView = isInView(e);
+            for (let e of expandElements) {
+                let visible = isVisible(e);
 
-                if (inView && !e.classList.contains("in-view")) {
+                if (visible && !e.classList.contains("in-view")) {
                     e.classList.add("in-view");
-                } else if (!inView && e.classList.contains("in-view")) {
+                } else if (!visible && e.classList.contains("in-view")) {
                     e.classList.remove("in-view");
                 }
             }
         }
 
-        function isInView(domElement) {
+        function isVisible(domElement) {
             let rect = domElement.getBoundingClientRect();
 
             if (
