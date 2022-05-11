@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @font-face {
    font-family: "Sen";
    src: url(./Sen/Sen-Regular.ttf);
@@ -65,6 +67,7 @@ footer {
 }
 
 $nav-height: 60px;
+$menu-button-height: $nav-height;
 
 header {
    background-image: url(./img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
@@ -145,8 +148,8 @@ header {
             }
 
             .menu-button {
-               height: $nav-height;
-               width: $nav-height;
+               height: $menu-button-height;
+               width: $menu-button-height;
                padding: 0;
                border: none;
                background-color: transparent;
@@ -156,17 +159,17 @@ header {
                div {
                   position: absolute;
                   background-color: #8491a0;
-                  height: $nav-height / 20;
+                  height: math.div($menu-button-height, 20);
                }
                div.first {
-                  top: $nav-height * 24 / 60;
-                  left: $nav-height * 18 / 60;
-                  width: $nav-height * 24 / 60;
+                  top: math.div($menu-button-height * 24, 60);
+                  left: math.div($menu-button-height * 18, 60);
+                  width: math.div($menu-button-height * 24, 60);
                }
                div.second {
-                  top: $nav-height * 33 / 60;
-                  left: $nav-height * 24 / 60;
-                  width: $nav-height * 18 / 60;
+                  top: math.div($menu-button-height * 33, 60);
+                  left: math.div($menu-button-height * 24, 60);
+                  width: math.div($menu-button-height * 18, 60);
                }
             }
          }
@@ -218,9 +221,9 @@ header {
 
             .menu-button {
                div {
-                  top: $nav-height * 28 / 60;
-                  left: $nav-height * 18 / 60;
-                  width: $nav-height * 24 / 60;
+                  top: math.div($menu-button-height * 28, 60);
+                  left: math.div($menu-button-height * 18, 60);
+                  width: math.div($menu-button-height * 24, 60);
                }
                div.first {
                   transform: rotate(-135deg);
@@ -457,5 +460,3 @@ footer {
       }
    }
 }
-
-/* 1210, 1100, 980, 750 */
