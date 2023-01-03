@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing HTML Hymn Text</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+
+      body {
+        padding: 0 5px;
+        font-size: 1.5em;
+      }
+
+      body[light-mode="dark"] {
+        background-color: black;
+        color: white;
+      }
+
+      form {
+        margin: 10px 0;
+      }
+
+      form label,
+      form label input {
+        cursor: pointer;
+      }
+
+      textarea#input,
+      div#rendered {
+        margin: 5px 0;
+        outline: none;
+        font-size: inherit;
+      }
+
+      textarea#input {
+        width: 100%;
+        background-color: inherit;
+        color: inherit;
+        padding: 15px;
+      }
+
+      div#rendered {
+        padding: 10px 20px;
+        border: 2px solid rgb(160, 160, 160);
+        box-shadow: 0 0 0 0px transparent;
+        border-radius: 5px;
+      }
+
+      [light-mode="dark"] div#rendered {
+        border: 2px solid rgb(96, 96, 96);
+      }
+
+      div#rendered:focus {
+        border: 2px solid rgb(5, 182, 79);
+        box-shadow: 0 0 0 5px rgb(218, 255, 218);
+      }
+
+      [light-mode="dark"] div#rendered:focus {
+        box-shadow: 0 0 0 5px rgb(0, 37, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="light-mode" role="checkbox">
+        <input
+          type="checkbox"
+          name="light-mode"
+          id="light-mode"
+          onchange="changeLightMode()"
+        />
+        Dark mode
+      </label>
+    </form>
+    <textarea oninput="updateContenteditable()" id="input" rows="7"></textarea>
+    <div oninput="updateTextarea()" contenteditable id="rendered"></div>
+    <script defer>
+      function updateContenteditable() {
+        document.getElementById("rendered").innerHTML =
+          document.getElementById("input").value;
+      }
+
+      function updateTextarea() {
+        document.getElementById("input").value =
+          document.getElementById("rendered").innerHTML;
+      }
+
+      function changeLightMode() {
+        let lightMode = document.getElementById("light-mode").checked
+          ? "dark"
+          : "light";
+        document.body.setAttribute("light-mode", lightMode);
+        localStorage.setItem("light-mode", lightMode);
+      }
+
+      if (localStorage.getItem("light-mode") == "dark") {
+        document.body.setAttribute("light-mode", "dark");
+        document.getElementById("light-mode").checked = true;
+      }
+    </script>
+  </body>
+</html>
