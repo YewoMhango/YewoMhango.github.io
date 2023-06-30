@@ -104,6 +104,7 @@ main > div {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .screenshots img {
