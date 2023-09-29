@@ -1,140 +1,158 @@
+@font-face {
+    font-family: "Sen";
+    src: url(../Sen/Sen-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sen";
+    src: url(../Sen/Sen-Bold.ttf);
+    font-weight: 700;
+}
+
 * {
-  box-sizing: border-box;
-  transition: 0.2s ease;
+    box-sizing: border-box;
+    transition: 0.2s ease;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Open Sans", sans-serif;
-  background-color: rgb(231, 231, 231);
-  /* height: 100%; */
-  height: 100%;
-  padding: 10px;
-  margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Sen", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    background-color: rgb(231, 231, 231);
+    /* height: 100%; */
+    height: 100%;
+    padding: 10px;
+    margin: 0;
 }
 
 main {
-  width: 100%;
-  max-width: 690px;
-  margin: 0;
-  padding: 10px;
-  background-color: white;
-  box-shadow: 0 0 5px rgb(194, 194, 194);
-  border-radius: 5px;
+    width: 100%;
+    max-width: 690px;
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgb(194, 194, 194);
+    border-radius: 5px;
 }
 
 main > div {
-  margin: 40px 20px;
+    margin: 40px 20px;
 }
 
 .header {
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  padding: 0 20px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
 }
 
 .header div {
-  padding: 0 10px;
+    padding: 0 10px;
 }
 .header h2 {
-  margin: 6px 0;
+    margin: 6px 0;
 }
 
 .header a {
-  color: grey;
-  font-size: 0.85em;
-  font-weight: 600;
-  text-decoration: none;
+    color: grey;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .downloadButtonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .downloadButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 40px;
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
 }
 
 .downloadButton:hover {
-  background-color: rgb(0, 97, 0);
+    background-color: rgb(0, 97, 0);
 }
 
 .screenshotsContainer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .screenshotsContainer > button {
-  background-color: white;
-  box-shadow: 0 0 5px grey;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  border: none;
-  border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border: none;
+    border-radius: 30px;
 }
 
 .screenshotsContainer > button svg {
-  height: 50%;
-  width: 50%;
-  fill: rgb(51, 51, 51);
+    height: 50%;
+    width: 50%;
+    fill: rgb(51, 51, 51);
 }
 
 .screenshotsContainer .scrollToRight {
-  right: 0;
+    right: 0;
 }
 
 .screenshots {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  scroll-behavior: smooth;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .screenshots img {
-  width: 100%;
-  /* margin: 5px; */
+    width: 100%;
+    /* margin: 5px; */
 }
 
 .screenshots a {
-  /* height: 100%; */
-  width: 620px;
-  display: inline-block;
-  flex-shrink: 0;
-  margin: 5px;
+    /* height: 100%; */
+    width: 620px;
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 5px;
+}
+
+p {
+    line-height: 1.5;
 }
 
 h3.downloadLinks {
-  text-align: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 700px) {
-  body {
-    padding: 0;
-    background-color: white;
-  }
-  main {
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-  }
-  .screenshots a {
-    width: calc(100% - 10px);
-  }
+    body {
+        padding: 0;
+        background-color: white;
+    }
+    main {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+    .screenshots a {
+        width: calc(100% - 10px);
+    }
 }

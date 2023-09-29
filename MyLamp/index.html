@@ -1,93 +1,77 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./images/Bible.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>MyLamp Bible</title>
-  </head>
-  <body>
-    <main>
-      <div class="header">
-        <img src="./images/Bible.svg" />
-        <div>
-          <h2>MyLamp Bible</h2>
-          <a href="http://github.com/YewoMhango/MyLamp">GitHub Repository</a>
-        </div>
-      </div>
 
-      <div class="screenshotsContainer">
-        <button class="scrollToLeft" onclick="scrollToLeft()">
-          <svg
-            width="68.979mm"
-            height="137.96mm"
-            version="1.1"
-            viewBox="0 0 68.979 137.96"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g transform="translate(-56.843 -50.008)">
-              <path
-                d="m125.82 50.008-68.978 68.978 68.979 68.979v-36.905l-32.073-32.073 32.073-32.073z"
-                stroke-linecap="round"
-                stroke-width="5.292"
-              />
-            </g>
-          </svg>
-        </button>
-        <div class="screenshots">
-          <a href="./images/1.png"> <img src="./images/1.png" /> </a>
-          <a href="./images/2.png"> <img src="./images/2.png" /> </a>
-          <a href="./images/3.png"> <img src="./images/3.png" /> </a>
-          <a href="./images/4.png"> <img src="./images/4.png" /> </a>
-        </div>
-        <button class="scrollToRight" onclick="scrollToRight()">
-          <svg
-            width="68.979mm"
-            height="137.96mm"
-            version="1.1"
-            viewBox="0 0 68.979 137.96"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g transform="translate(-56.843 -50.008)">
-              <path
-                d="m56.843 50.008 68.978 68.978-68.979 68.979v-36.905l32.073-32.073-32.073-32.073z"
-                stroke-linecap="round"
-                stroke-width="5.292"
-              />
-            </g>
-          </svg>
-        </button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/Bible.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>MyLamp Bible</title>
+</head>
 
+<body>
+  <main>
+    <div class="header">
+      <img src="./images/Bible.svg" />
       <div>
-        <p>
-          <b>MyLamp Bible</b> is a crossplatform desktop Bible app meant to make
-          God's word more easily accessible to you. “Thy word is a <b>lamp</b> 
-          unto my feet, and a light unto my path.” (Psalms 119:105)
-        </p>
+        <h2>MyLamp Bible</h2>
+        <a href="http://github.com/YewoMhango/MyLamp">GitHub Repository</a>
       </div>
+    </div>
 
-      <div>
-        <div class="downloadButtonContainer">
-          <a
-            class="downloadButton"
-            href="https://github.com/YewoMhango/MyLamp/releases/latest"
-          >
-            <strong>Download here</strong>
-          </a>
-        </div>
+    <div class="screenshotsContainer">
+      <button class="scrollToLeft" onclick="scrollToLeft()">
+        <svg width="68.979mm" height="137.96mm" version="1.1" viewBox="0 0 68.979 137.96"
+          xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(-56.843 -50.008)">
+            <path d="m125.82 50.008-68.978 68.978 68.979 68.979v-36.905l-32.073-32.073 32.073-32.073z"
+              stroke-linecap="round" stroke-width="5.292" />
+          </g>
+        </svg>
+      </button>
+      <div class="screenshots">
+        <a href="./images/1.png"> <img src="./images/1.png" /> </a>
+        <a href="./images/2.png"> <img src="./images/2.png" /> </a>
+        <a href="./images/3.png"> <img src="./images/3.png" /> </a>
+        <a href="./images/4.png"> <img src="./images/4.png" /> </a>
       </div>
-    </main>
-    <script>
-      function scrollToRight() {
-        let screenshots = document.querySelector(".screenshots");
-        screenshots.scrollLeft += screenshots.getBoundingClientRect().width;
-      }
-      function scrollToLeft() {
-        let screenshots = document.querySelector(".screenshots");
-        screenshots.scrollLeft -= screenshots.getBoundingClientRect().width;
-      }
-    </script>
-  </body>
+      <button class="scrollToRight" onclick="scrollToRight()">
+        <svg width="68.979mm" height="137.96mm" version="1.1" viewBox="0 0 68.979 137.96"
+          xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(-56.843 -50.008)">
+            <path d="m56.843 50.008 68.978 68.978-68.979 68.979v-36.905l32.073-32.073-32.073-32.073z"
+              stroke-linecap="round" stroke-width="5.292" />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <div>
+      <p>
+        <b>MyLamp Bible</b> is a crossplatform desktop Bible app meant to make
+        God's word more easily accessible to you. “Thy word is a <b>lamp</b>
+        unto my feet, and a light unto my path.” (Psalms 119:105)
+      </p>
+    </div>
+
+    <div>
+      <div class="downloadButtonContainer">
+        <a class="downloadButton" href="https://github.com/YewoMhango/MyLamp/releases/latest">
+          <strong>Download here</strong>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script>
+    function scrollToRight() {
+      let screenshots = document.querySelector(".screenshots");
+      screenshots.scrollLeft += screenshots.getBoundingClientRect().width;
+    }
+    function scrollToLeft() {
+      let screenshots = document.querySelector(".screenshots");
+      screenshots.scrollLeft -= screenshots.getBoundingClientRect().width;
+    }
+  </script>
+</body>
+
 </html>
