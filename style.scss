@@ -26,9 +26,13 @@ body {
    flex-direction: column;
    align-items: center;
 
-   > * {
+   >* {
       width: 100%;
    }
+}
+
+html {
+   scroll-behavior: smooth !important;
 }
 
 a {
@@ -168,11 +172,13 @@ header {
                   background-color: #8491a0;
                   height: math.div($menu-button-height, 20);
                }
+
                div.first {
                   top: math.div($menu-button-height * 24, 60);
                   left: math.div($menu-button-height * 18, 60);
                   width: math.div($menu-button-height * 24, 60);
                }
+
                div.second {
                   top: math.div($menu-button-height * 33, 60);
                   left: math.div($menu-button-height * 24, 60);
@@ -204,6 +210,7 @@ header {
                   }
                }
             }
+
             .menu-button {
                display: none;
             }
@@ -232,9 +239,11 @@ header {
                   left: math.div($menu-button-height * 18, 60);
                   width: math.div($menu-button-height * 24, 60);
                }
+
                div.first {
                   transform: rotate(-135deg);
                }
+
                div.second {
                   transform: rotate(135deg);
                }
@@ -278,10 +287,12 @@ header {
       img {
          width: 40px;
       }
+
       p {
          font-size: 16px;
       }
    }
+
    .skill:hover {
       img {
          transform: scale(115%);
@@ -314,6 +325,7 @@ header {
          }
       }
    }
+
    a.project:hover {
       transform: scale(103%);
 
@@ -436,6 +448,7 @@ footer {
             margin: 20px 0;
          }
       }
+
       .skills {
          margin: 30px 0;
          display: grid;
