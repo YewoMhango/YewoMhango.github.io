@@ -26,7 +26,7 @@ body {
    flex-direction: column;
    align-items: center;
 
-   >* {
+   > * {
       width: 100%;
    }
 }
@@ -72,6 +72,10 @@ section {
    background: linear-gradient(90deg, #5221e6, #8d21e6);
 }
 
+.highlight {
+   color: #8d21e6;
+}
+
 header,
 footer {
    background-color: #181823;
@@ -84,7 +88,7 @@ header {
    background-image: url(./img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
    background-size: cover;
    background-position: center;
-   min-height: 100vh;
+   // min-height: 100vh;
 
    nav {
       position: relative;
@@ -253,7 +257,7 @@ header {
    }
 
    .content {
-      min-height: calc(100vh - $nav-height);
+      min-height: 700px;
       padding: 50px;
       display: flex;
       flex-direction: column;

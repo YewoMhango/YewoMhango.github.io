@@ -67,6 +67,10 @@ section {
   background: linear-gradient(90deg, #5221e6, #8d21e6);
 }
 
+.highlight {
+  color: #8d21e6;
+}
+
 header,
 footer {
   background-color: #181823;
@@ -76,7 +80,6 @@ header {
   background-image: url(./img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
 }
 header nav {
   position: relative;
@@ -213,7 +216,7 @@ header nav .right .nav-links-container .nav-links a {
   }
 }
 header .content {
-  min-height: calc(100vh - 60px);
+  min-height: 700px;
   padding: 50px;
   display: flex;
   flex-direction: column;

@@ -2,35 +2,34 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DisasterWatch | Yewo Mhango</title>
         <meta
             name="description"
-            content="A description of Traffic Accident and Crime Mapping System in Blantyre City (TRACRMAP)"
+            content="Learn more about the DisasterWatch Early Warning System prototype"
         />
         <meta
             property="og:title"
-            content="TRACRAP (Traffic Accident and Crime Mapping System)"
+            content="DisasterWatch Early Warning System"
         />
         <meta
             property="og:image"
-            content="https://yewomhango.github.io/tracrmap/screenshots/map%20clusters.jpg"
+            content="https://yewomhango.github.io/disasterwatch/screenshots/opengraph-preview.jpg"
         />
         <meta
             property="og:description"
-            content="A description of Traffic Accident and Crime Mapping System in Blantyre City (TRACRMAP)"
+            content="Learn more about the DisasterWatch Early Warning System prototype"
         />
         <meta
             property="og:url"
-            content="https://yewomhango.github.io/tracrmap/"
+            content="https://yewomhango.github.io/disasterwatch/"
         />
         <meta
             name="keywords"
-            content="Crime mapping, Traffic accident mapping"
+            content="Disaster Mapping, Early Warning System"
         />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/style.css" />
-        <title>TRACRMAP | Yewo Mhango</title>
         <style>
             main {
                 display: flex;
@@ -115,7 +114,6 @@
             }
         </style>
     </head>
-
     <body onscroll="animateOnScroll()">
         <!-- <div class="gradient-strip"></div> -->
         <svg
@@ -156,37 +154,51 @@
         </header>
         <main>
             <section class="animate-slide-in">
-                <h1>
-                    Traffic Accident and Crime Mapping System in Blantyre City
-                    (TRACRMAP)
-                </h1>
-                <div class="img-container">
-                    <img
-                        class="animate-expand-in"
-                        src="./screenshots/map clusters.jpg"
-                        alt="Screenshot of TRACRMAP showing crime clusters"
-                    />
-                </div>
+                <h1>DisasterWatch Early Warning System</h1>
                 <p>
-                    This was the final-year project of three MUST students,
-                    namely Yewo Mhango, Francis Makina, and Samuel Kachigamba.
-                    Its purpose was to explore and demonstrate how the
-                    collection, storage, analysis and presentation of Crime and
-                    Traffic Accident records in Malawi can be streamlined and
-                    automated using digital technology and geospatial
-                    infrastructure.
+                    This was our submission for a competition at MUST to create
+                    an Early Warning System for disasters to provide alerts and
+                    helpful resources to Malawians in times of need. This was in
+                    the wake of 2023's Cyclone Freddy, which caused a lot of
+                    destruction and loss of life in the southern region of
+                    Malawi.
+                </p>
+                <p>
+                    Our team ended up coming in second place, close behind the
+                    <a href="https://optimumsystemsmw.com/" class="highlight"
+                        >Optimum Systems team</a
+                    >, but our respective apps both had such unique features
+                    that their winning app ended up being required to
+                    incorporate some of the features from our own app
                 </p>
             </section>
             <section class="animate-slide-in">
-                <h1>Data recording</h1>
+                <h1>Mobile App</h1>
                 <p>
-                    Instead of the normal practice of using paper records, a
-                    mobile app was created which would allow police and traffic
-                    officers to record crimes or traffic accidents digitally on
-                    the go. In addition, the app would allow officers to record
-                    the coordinates of the incident, using either GPS or custom
-                    offline maps
+                    The public-facing part of the system was a mobile app which
+                    would deliver alerts and notifications to users located in
+                    areas which could be affected by upcoming disasters.
+                    Additionally, the mobile app also provided the following
+                    features:
                 </p>
+                <ul>
+                    <li>
+                        Maps of evacuation shelters, their contact details, and
+                        directions
+                    </li>
+                    <li>Crowd-sourced damage reporting</li>
+                    <li>Weather forecasts</li>
+                    <li>
+                        Ability to customize additional monitored locations for
+                        which you could receive disaster alerts
+                    </li>
+                    <li>Real-time disaster map</li>
+                    <li>Contacts of emergency services and law enforcement</li>
+                    <li>
+                        Ability to customize the app between three local
+                        languages (English, Chichewa, Chitumbuka)
+                    </li>
+                </ul>
                 <div class="carousel-container animate-expand-in">
                     <button
                         class="scrollToLeft"
@@ -197,10 +209,15 @@
                         </svg>
                     </button>
                     <div class="images mobile">
-                        <img src="./screenshots/mobile login.png" />
-                        <img src="./screenshots/mobile input.png" />
-                        <img src="./screenshots/mobile accident details.png" />
-                        <img src="./screenshots/mobile map.png" />
+                        <img src="./screenshots/splash screen.jpg" />
+                        <img src="./screenshots/homescreen.jpg" />
+                        <img src="./screenshots/alerts.jpeg" />
+                        <img src="./screenshots/alert.jpg" />
+                        <img src="./screenshots/damage.jpg" />
+                        <img src="./screenshots/shelter.jpg" />
+                        <img src="./screenshots/forecasts.jpg" />
+                        <img src="./screenshots/monitored locations.jpg" />
+                        <img src="./screenshots/monitored locations help.jpg" />
                     </div>
                     <button
                         class="scrollToRight"
@@ -213,24 +230,13 @@
                 </div>
             </section>
             <section class="animate-slide-in">
-                <h1>Data visualization</h1>
+                <h1>Administration Interface</h1>
                 <p>
-                    Once recorded by the officers, the data would then be
-                    uploaded onto the website of the system.
-                </p>
-                <p>
-                    From there, the data could be visualized on a map to allow
-                    officers as well as the public to identify crime trends as
-                    well as the areas worst affected by crimes or accidents.
-                    Various types of map visualizations were created, including
-                    discrete points (map markers), clusters, grids, heatmaps,
-                    etc, as shown in the below screenshots.
-                </p>
-                <p>
-                    It is also possible to filter the data being displayed based
-                    on specified criteria, as well as allowing the user to
-                    download the underlying raw data for further analysis, among
-                    other features.
+                    The Administration Interface was what would be used by the
+                    managers of the system to push alerts to the public, edit
+                    and manage evacuation shelters, review and approve
+                    crowd-sourced damage reports to show in the app, and receive
+                    user messages
                 </p>
                 <div class="carousel-container animate-expand-in">
                     <button
@@ -242,18 +248,10 @@
                         </svg>
                     </button>
                     <div class="images map full-width-images">
-                        <img src="./screenshots/map ward.jpg" />
-                        <img src="./screenshots/map clusters.jpg" />
-                        <img src="./screenshots/map heatmap.jpg" />
-                        <img src="./screenshots/map filter.jpg" />
-                        <img src="./screenshots/map hexgrid.jpg" />
-                        <img src="./screenshots/map incident.jpg" />
-                        <img src="./screenshots/map square grid.jpg" />
-                        <img src="./screenshots/map roads.jpg" />
-                        <img src="./screenshots/dashboard crimes.jpg" />
-                        <img src="./screenshots/dashboard accidents.png" />
-                        <img src="./screenshots/dashboard summary 1.png" />
-                        <img src="./screenshots/dashboard summary 2.png" />
+                        <img src="./screenshots/alert extent.png" />
+                        <img src="./screenshots/new alert.png" />
+                        <img src="./screenshots/evacuation shelters.png" />
+                        <img src="./screenshots/reports.png" />
                     </div>
                     <button
                         class="scrollToRight"
