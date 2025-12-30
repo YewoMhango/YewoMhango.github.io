@@ -326,7 +326,8 @@ header {
             gap: 12px;
 
             img {
-               width: 24px;
+               max-width: 24px;
+               max-height: 24px;
             }
 
             &:hover {

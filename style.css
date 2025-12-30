@@ -273,7 +273,8 @@ header .content p {
   gap: 12px;
 }
 #skillset .skill ul.technologies li img {
-  width: 24px;
+  max-width: 24px;
+  max-height: 24px;
 }
 #skillset .skill ul.technologies li:hover img {
   transform: scale(120%);
