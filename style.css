@@ -259,7 +259,7 @@ header .content p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 #skillset .skill ul.technologies li {
   margin: 0;
