@@ -34,10 +34,7 @@
                                 <!-- <li><a href="#contact"> Contact </a></li> -->
                             </ol>
                         </div>
-                        <button
-                            class="menu-button"
-                            onclick="toggleNavMenu(); console.log(event)"
-                        >
+                        <button class="menu-button" onclick="toggleNavMenu()">
                             <div class="first"></div>
                             <div class="second"></div>
                         </button>
@@ -110,7 +107,7 @@
                         <a href="https://tailwindcss.com">
                             <li>
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png"
                                     alt="Tailwind"
                                 />
                                 Tailwind
@@ -165,7 +162,7 @@
                         <a href="https://flutter.dev/">
                             <li>
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flutter_logo.svg/1024px-Flutter_logo.svg.png"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flutter_logo.svg"
                                     alt="F"
                                 />
                                 Flutter
@@ -198,7 +195,7 @@
                         <a href="https://inkscape.org/">
                             <li>
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/1024px-Inkscape_Logo.svg.png"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Inkscape_Logo.svg"
                                     alt="Inkscape"
                                 />
                                 Inkscape
@@ -425,10 +422,10 @@
         }
 
         let slideElements = Array.from(
-            document.querySelectorAll(".animate-slide-in")
+            document.querySelectorAll(".animate-slide-in"),
         );
         let expandElements = Array.from(
-            document.querySelectorAll(".animate-expand-in")
+            document.querySelectorAll(".animate-expand-in"),
         );
 
         animateOnScroll();
